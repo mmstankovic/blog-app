@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    padding: 0 5%;
+    width: 100%;
+    height: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #008080;
+}
+.logo {
+    color: #FFF;
+    font-size: 1.7rem;
+    
+}
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav li {
+    margin-left: 2rem;
+    font-size: 1.1rem;
+}
+.nav a {
+    text-decoration: none;
+    color: turquoise;
+}
+.nav a:hover,
+.nav a:active,
+.nav a.active {
+  color: #e6fcfc;
+  padding: 0 4px 4px 4px;
+  border-bottom: 2px solid #e6fcfc;
+}
+.logout {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: turquoise;
+  padding: 0;
+}
+
+
+

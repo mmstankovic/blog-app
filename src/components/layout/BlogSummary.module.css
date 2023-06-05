@@ -1,0 +1,17 @@
+.summary {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.summary h1 {
+    font-size: 70px;
+    color: teal;
+}
+.summary h5 {
+    font-size:18px;
+    color: #CACCCE;
+    line-height: 30px;
+}

@@ -1,0 +1,17 @@
+.filter {
+   display: flex;
+   justify-content: center;
+   gap: 0.2rem;
+   margin: 3rem 0;
+   
+}
+.filter label {
+    padding: 0.5rem;
+    color: #86888A;
+}
+.filter select {
+    min-width: 250px;
+    padding-left: 0.5rem;
+    color: #86888A;
+    outline: none;
+}

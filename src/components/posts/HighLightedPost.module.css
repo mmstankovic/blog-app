@@ -1,0 +1,27 @@
+.highlighted-post {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #E6FDF6;
+    padding: 1.2rem;
+    color: #86888A;
+}
+.highlighted-image {
+    width: 100%;
+    padding: 20px;
+}
+.blog-author {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+.body {
+    font-size: 14px;
+    padding: 0 35px;
+}
+.overview-link {
+    margin-bottom: 4rem;
+}

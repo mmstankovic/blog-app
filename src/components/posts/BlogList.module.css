@@ -1,0 +1,17 @@
+.posts-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 1.2rem;
+}
+.all-categories {
+    padding: 10px 15px;
+    background-color: teal;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-bottom: 50px;
+}
