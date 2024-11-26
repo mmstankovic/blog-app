@@ -1,4 +1,10 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .main {
+    flex:1;
     margin: 3rem auto;
     width: 90%;
     max-width: 50rem;

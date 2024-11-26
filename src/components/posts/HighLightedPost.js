@@ -19,7 +19,7 @@ const HighLightedPost = () => {
           <div>By: <span>{blogCtx.selectedPost.author}</span> | On: 6th October 2019 | 5minutes Read</div>
           <div>
             <img
-              src="https://source.unsplash.com/600x400/?programming"
+              src={`http://localhost:3000/assets/images/${blogCtx.selectedPost.image}`}
               alt="card__image"
               className={classes["highlighted-image"]}
             />

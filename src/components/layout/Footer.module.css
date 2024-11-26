@@ -1,0 +1,8 @@
+footer {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #F4F8FA;
+    color: #008080;
+}

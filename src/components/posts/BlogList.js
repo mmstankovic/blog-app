@@ -75,6 +75,7 @@ const BlogList = () => {
         key={post.id} 
         id={post.id} 
         title={post.title}
+        image={post.image}
         category={post.category}
         body={getPartOfBody(post.body)}
         author={post.author}
