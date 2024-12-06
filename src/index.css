@@ -20,5 +20,8 @@ body {
   font-weight: bold;
   color: #cb2d3e;
 }
-
+.page-title {
+  color: #86888A;
+  text-align: center;
+}
 

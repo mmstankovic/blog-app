@@ -56,7 +56,7 @@ const Form = (props) => {
 
     return (
         <>
-        <h1>{isEditing ? 'Edit your post' : 'Create your post'}</h1>
+        <h1 className="page-title">{isEditing ? 'Edit your post' : 'Create your post'}</h1>
         <Card>
             <form onSubmit={submitForm}>
                 <div className={classes.control}>

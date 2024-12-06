@@ -14,7 +14,7 @@ const BlogItem = (props) => {
         <div className={classes["card__header"]}>
           <img
             src={`http://localhost:3000/assets/images/${props.image}`}
-            alt="card__image"
+            alt={props.title}
             className={classes["card__image"]}
           />
         </div>

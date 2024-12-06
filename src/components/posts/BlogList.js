@@ -88,7 +88,7 @@ const BlogList = () => {
             {displayConfirmationModal && <Modal id={postId} name='Cancel' title='Delete Confirmation' message='Are you sure you want to delete this post?' action='Delete' onDelete={submitDelete} onClose={hideConfirmationModal}/>}
             {!category && <PostsFilter onFilter={postsFilterHandler} selCategory={postCategory}/>}
             {category && <button className={classes['all-categories']} onClick={displayAllPosts}>All Categories</button>}
-            <ul className={classes['posts-list']}>
+            <ul className={classes['posts-list']} style={{gap:`${allPosts.length === 1 ? 0 : '1rem'}`}}>
                 {allPosts}
             </ul>
         </>

@@ -5,6 +5,7 @@
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
+    color: #86888A;
 }
 .control input,
 .control textarea {
@@ -16,6 +17,7 @@
     display: block;
     width: 100%;
     font-size: 1.25rem;
+    color: #86888A;
 }
   
 .control input:focus,
@@ -32,6 +34,11 @@
 .actions button {
     font-size: 1.25rem;
     cursor: pointer;
+    background-color: #008080;
+    min-width: 92px;
+    color:#fff;
+    border: none;
+    padding: 5px 10px;
 }
 .error {
     color: darkred;

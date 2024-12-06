@@ -11,17 +11,29 @@
 }
 .highlighted-image {
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
 }
 .blog-author {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
+    font-size: 14px;
 }
 .body {
-    font-size: 14px;
-    padding: 0 35px;
+    text-align: left;
 }
 .overview-link {
     margin-bottom: 4rem;
+}
+@media (max-width:768px) {
+    .highlighted-card {
+        padding: 0.5rem;
+        margin:0;
+    }
+    .highlighted-post {
+        padding: 0.5rem;
+    }
+    .highlighted-post h1 {
+        font-size: 24px;
+    }
+    .body {
+        font-size: 14px;
+    }
 }
