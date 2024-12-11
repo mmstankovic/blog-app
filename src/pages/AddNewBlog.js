@@ -19,6 +19,7 @@ const AddNewBlog = () => {
                 author: postData.author,
                 title: postData.title,
                 category: postData.category,
+                image: postData.image,
                 body: postData.body
             })
         })

@@ -27,19 +27,35 @@
 }
   
 .actions {
-    text-align: right;
     margin-top: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap:0.3125rem;
 }
-  
+
 .actions button {
     font-size: 1.25rem;
     cursor: pointer;
-    background-color: #008080;
     min-width: 92px;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.actions :first-child button {
+    background-color: transparent;
+    color:#008080;
+    border:1px solid #008080;
+}
+.actions :nth-child(2) {
+    background-color: #008080;
     color:#fff;
     border: none;
-    padding: 5px 10px;
 }
 .error {
     color: darkred;
+}
+@media (max-width:575px) {
+    .actions button {
+        font-size: 1rem;
+        min-width: 72px;
+    }
 }

@@ -1,4 +1,5 @@
 import { useState, useContext } from "react"
+import { Link } from "react-router-dom"
 import BlogContext from "../../store/blog-context"
 import classes from '../posts/PostForm.module.css'
 import Card from "../UI/Card"
@@ -14,6 +15,7 @@ const Form = (props) => {
         author: isEditing ? ctxAuthor : '',
         title: isEditing ? ctxTitle : '',
         category: isEditing ? ctxCategory : '',
+        image:'',
         body: isEditing ? ctxBody : ''
     })
    
@@ -21,6 +23,7 @@ const Form = (props) => {
         author: true,
         title: true,
         category: true,
+        image:true,
         body: true
     })
 
@@ -28,6 +31,7 @@ const Form = (props) => {
     const titleInputIsValid = isNotEmpty(postData.title)
     const categoryInputIsValid = isNotEmpty(postData.category)
     const bodyInputIsValid = isNotEmpty(postData.body)
+    const imageLinkInputIsValid = isEditing ? true : isNotEmpty(postData.image)
 
     const submitForm = (e) => {
         e.preventDefault()
@@ -36,10 +40,11 @@ const Form = (props) => {
             author: authorInputIsValid,
             title: titleInputIsValid,
             category: categoryInputIsValid,
+            image: imageLinkInputIsValid,
             body: bodyInputIsValid
         })
 
-        const formIsValid = authorInputIsValid && titleInputIsValid && categoryInputIsValid && bodyInputIsValid
+        const formIsValid = authorInputIsValid && titleInputIsValid && categoryInputIsValid && bodyInputIsValid && imageLinkInputIsValid
 
         if(!formIsValid) {
             return
@@ -74,12 +79,18 @@ const Form = (props) => {
                     <input id="category" type="text" value={postData.category} onChange={(e) => setPostData({...postData, category: e.target.value})}/>
                     {!formInputsValidity.category && <p className={classes.error}>Please enter a post category!</p>}
                 </div>
+                {!isEditing && <div className={classes.control}>
+                    <label htmlFor="image">Image Link</label>
+                    <input id="image" type="text" value={postData.image} onChange={(e) => setPostData({...postData, image: e.target.value})}/>
+                    {!formInputsValidity.image && <p className={classes.error}>Please enter a image link!</p>}
+                </div>}
                 <div className={classes.control}>
                     <label htmlFor="body">Post Body</label>
                     <textarea id="body" type="text" rows='5' value={postData.body} onChange={(e) => setPostData({...postData, body: e.target.value})}></textarea>
                     {!formInputsValidity.body && <p className={classes.error}>Please enter a post body!</p>}
                 </div>
                 <div className={classes.actions}>
+                    <Link to='/blogs'><button>Cancel</button></Link>
                     <button type='submit'>{blogCtx.isEditing ? 'Edit' : 'Submit'}</button>
                 </div>
             </form>

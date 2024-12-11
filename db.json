@@ -3,7 +3,7 @@
     {
       "author": "Shubham",
       "title": "Json Server",
-      "image": "json.png",
+      "image": "http://localhost:3000/assets/images/json.png",
       "category": "Development",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\n\nWhere does it come from?\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n\nWhere can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       "id": 1
@@ -11,7 +11,7 @@
     {
       "author": "Satyam",
       "title": "TypeScript",
-      "image": "typescript.png",
+      "image": "http://localhost:3000/assets/images/typescript.png",
       "category": "OOP",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\n\nWhere does it come from?\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n\nWhere can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.",
       "id": 2
@@ -19,14 +19,14 @@
     {
       "author": "Jane Doe",
       "title": "React Framework",
-      "image": "reactjs.png",
+      "image": "http://localhost:3000/assets/images/reactjs.png",
       "category": "Framework",
       "body": "A JavaScript library for building user interfaces.\n",
       "id": 3
     },
     {
       "author": "Jasmina",
-      "image": "javascript.png",
+      "image": "http://localhost:3000/assets/images/javascript.png",
       "title": "JavaScript",
       "category": "Programming",
       "body": "Learning React is funny. Caslav is the best developer in the world. Sigurno da je tako.\n",
@@ -35,7 +35,7 @@
     {
       "author": "Oracle",
       "title": "Java",
-      "image": "java.png",
+      "image": "http://localhost:3000/assets/images/java.png",
       "category": "Programming",
       "body": "The Java™ Programming Language is a general-purpose, concurrent, strongly typed, class-based object-oriented language. It is normally compiled to the bytecode instruction set and binary format defined in the Java Virtual Machine Specification.",
       "id": 5
@@ -43,7 +43,7 @@
     {
       "author": "Marcus",
       "title": "JavaScript Eloquent",
-      "image": "fun-programming.jpeg",
+      "image": "http://localhost:3000/assets/images/fun-programming.jpeg",
       "category": "Development",
       "body": "This is a book about JavaScript, programming, and the wonders of the digital. You can read it online here, or buy your own paperback copy.",
       "id": 6
@@ -51,7 +51,7 @@
     {
       "author": "Linus Torvalds",
       "title": "Github",
-      "image": "github.jpeg",
+      "image": "http://localhost:3000/assets/images/github.jpeg",
       "category": "Git",
       "body": "Harnessed for productivity. Designed for collaboration. Celebrated for built-in security. Welcome to the platform developers love.",
       "id": 8
@@ -59,7 +59,7 @@
     {
       "author": "Dribble",
       "title": "Success modal",
-      "image": "funpro.png",
+      "image": "http://localhost:3000/assets/images/funpro.png",
       "category": "UX",
       "body": "invitation successfully send modal. \nUpdated!",
       "id": 9
@@ -67,7 +67,7 @@
     {
       "author": "Sandy",
       "title": "Bootstrap",
-      "image": "bootstrap.png",
+      "image": "http://localhost:3000/assets/images/bootstrap.png",
       "category": "Toolkit",
       "body": "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.",
       "id": 10
@@ -77,14 +77,15 @@
       "title": "New Title",
       "category": "New Category",
       "body": "JavaScript is the world's most popular programming language.",
-      "image": "js.png",
+      "image": "http://localhost:3000/assets/images/js.png",
       "id": 11
     },
     {
       "author": "Andrew Mead",
-      "title": "Node",
-      "category": "Backend",
-      "body": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. edited2",
+      "title": "MERN stack",
+      "category": "MERN",
+      "image": "https://www.guvi.in/blog/wp-content/uploads/2024/05/1-1.webp",
+      "body": "The MERN stack is a collection of technologies that help developers build robust and scalable web applications using JavaScript. The acronym “MERN” stands for MongoDB, Express, React, and Node.js, with each component playing a role in the development process. MongoDB serves as a document-oriented database that can efficiently store data in JSON format. Express is a web application framework that provides a set of features to streamline the assembly of web applications. React is a front-end JavaScript library that offers a large toolkit for crafting user interfaces. Node.js is the runtime environment for execution of JavaScript code on the server side, coordinating communication between front-end and back-end components.\n\nAs a group, these components make the MERN stack a preferred choice for developers seeking an efficient, full-stack development framework.",
       "id": 12
     }
   ]

@@ -14,7 +14,7 @@ const EditPost = () => {
         setIsLoading(true)
         setHttpEditError(null)
         fetch(`http://localhost:5000/posts/${id}`, {
-            method: 'PUT',
+            method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 author: newPostData.author,

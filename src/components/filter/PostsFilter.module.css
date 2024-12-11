@@ -3,7 +3,6 @@
    justify-content: center;
    gap: 0.2rem;
    margin: 3rem 0;
-   
 }
 .filter label {
     padding: 0.5rem;
@@ -14,4 +13,15 @@
     padding-left: 0.5rem;
     color: #86888A;
     outline: none;
+}
+@media (max-width:575px) {
+    .filter {
+        flex-direction: column;
+    }
+    .filter label {
+        padding: 0.5rem 0;
+    }
+    .filter select {
+        padding: 0.5rem;
+    }
 }

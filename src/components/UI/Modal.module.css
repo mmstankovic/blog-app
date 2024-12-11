@@ -63,4 +63,8 @@
   background-color: #3FC59D;
   color: #FFF;
 }
-
+@media (max-width:575px) {
+  .modal {
+    min-width: 330px;
+  }
+}
