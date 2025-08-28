@@ -24,7 +24,7 @@ const BlogList = () => {
     }
 
     const submitDelete = async (id) => {
-        await fetch(`http://localhost:5000/posts/${id}`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/posts/${id}`, {
             method: 'DELETE'
         })
 

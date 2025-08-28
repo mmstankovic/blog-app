@@ -12,7 +12,7 @@ const AddNewBlog = () => {
     const sendNewPostData = (postData) => {
         setIsLoading(true)
         setHttpError(null)
-        fetch('http://localhost:5000/posts', {
+        fetch(`${process.env.REACT_APP_API_URL}/posts`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

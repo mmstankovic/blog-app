@@ -13,7 +13,7 @@ const EditPost = () => {
     const editPostHandler = (newPostData) => {
         setIsLoading(true)
         setHttpEditError(null)
-        fetch(`http://localhost:5000/posts/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/posts/${id}`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

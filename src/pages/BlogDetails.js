@@ -16,7 +16,7 @@ const BlogDetails = () => {
         const fetchPost = async (id) => {
             setIsLoading(true)
             setError(null)
-            const response = await fetch(`http://localhost:5000/posts/${id}`)
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/posts/${id}`)
 
             if(!response.ok) {
                 throw new Error('Could not fetch post details!')
