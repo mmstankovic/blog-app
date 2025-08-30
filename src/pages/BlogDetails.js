@@ -34,10 +34,10 @@ const BlogDetails = () => {
     }, [getSinglePost, postId])
 
     if(isLoading) {
-        return <div className='centered'>Loading post...</div>
+        return <div className='centered text-loading'>Loading post...</div>
     }
     if(error) {
-        return <div className='centered'>{error}</div>
+        return <div className='centered text-error'>{error}</div>
     }
     if(!selectedPost.author) {
         return <p>No found post!</p>

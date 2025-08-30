@@ -9,42 +9,58 @@ const Blogs = () => {
     const { getAllPosts } = blogCtx
     const [httpError, setHttpError] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
+    const [showColdStartMessage, setShowColdStartMessage] = useState(false)
 
     useEffect(() => {
         const fetchPostsData = async () => {
             setIsLoading(true)
             setHttpError(null)
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/posts`)
 
-            if(!response.ok) {
-                throw new Error('Fetch posts data failed!')
+            const hasLoadedBefore = sessionStorage.getItem('hasLoadedPosts')
+
+            if (!hasLoadedBefore) {
+                setShowColdStartMessage(true)
             }
 
-            const data = await response.json()
-            
-            getAllPosts(data)
-            setIsLoading(false)
+            try {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/posts`)
+
+                if (!response.ok) {
+                    throw new Error('Fetch posts data failed!')
+                }
+
+                const data = await response.json()
+
+                getAllPosts(data)
+                sessionStorage.setItem('hasLoadedPosts', 'true')
+            } catch (err) {
+                setHttpError(err.message)
+            } finally {
+                setIsLoading(false)
+                setShowColdStartMessage(false)
+            }
+
         }
-        fetchPostsData().catch(error => {
-            setHttpError(error.message)
-            setIsLoading(false)
-        })
+        fetchPostsData()
+
     }, [getAllPosts])
 
     let content
 
-    if(isLoading) {
-        content = <div className='centered'>Loading posts...</div>
-    }
-
-    if(httpError) {
-        content = <div className='centered'>{httpError}</div>
-    }
-        
-    if(!isLoading && (!blogCtx.posts || blogCtx.posts.length === 0)) {
+    if (isLoading) {
+        content = (
+            <div className='centered column text-warning'>
+                {showColdStartMessage && (
+                    <p>Please wait, the server is waking up (cold start)...</p>
+                )}
+                <p className="text-loading">Loading posts...</p>
+            </div>
+        )
+    } else if (httpError) {
+        content = <div className='centered text-error'>{httpError}</div>
+    } else if (!blogCtx.posts || blogCtx.posts.length === 0) {
         content = <NoPostsFound />
-    }
-    if(!isLoading && (blogCtx.posts || blogCtx.posts.length !== 0)) {
+    } else {
         content = <BlogList />
     }
 
@@ -54,6 +70,5 @@ const Blogs = () => {
             {content}
         </>
     )
-      
 }
 export default Blogs

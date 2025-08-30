@@ -18,10 +18,27 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+.column {
+  flex-direction: column;
+}
+.text-error {
   color: #cb2d3e;
+}
+.text-loading {
+  color: #86888A;
+}
+.text-warning {
+  color:#f39c12;
+  text-align: center;
 }
 .page-title {
   color: #86888A;
   text-align: center;
 }
 
+@media (min-width:768px) {
+  .text-warning, .text-loading, .text-error {
+    font-size: 18px;
+  }
+}

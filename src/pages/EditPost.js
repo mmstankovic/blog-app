@@ -47,7 +47,7 @@ const EditPost = () => {
     }
 
     if(httpEditError) {
-        return <div className='centered'>{httpEditError}</div>
+        return <div className='centered text-error'>{httpEditError}</div>
     }
 
     return <PostForm onEdit={editPostHandler} isLoading={isLoading} />
