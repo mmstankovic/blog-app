@@ -13,6 +13,7 @@
     padding-left: 0.5rem;
     color: #86888A;
     outline: none;
+    box-sizing: border-box;
 }
 @media (max-width:575px) {
     .filter {

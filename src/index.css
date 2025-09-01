@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Maven Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #F2FEFE;
 }
 
