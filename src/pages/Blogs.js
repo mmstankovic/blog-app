@@ -3,6 +3,7 @@ import { useEffect, useContext, useState } from "react"
 import BlogContext from "../store/blog-context"
 import NoPostsFound from '../components/posts/NoPostsFound'
 import BlogSummary from "../components/layout/BlogSummary"
+import BlinkingDots from "../components/UI/BlinkingDots"
 
 const Blogs = () => {
     const blogCtx = useContext(BlogContext)
@@ -51,9 +52,15 @@ const Blogs = () => {
         content = (
             <div className='centered column text-warning'>
                 {showColdStartMessage && (
-                    <p>Please wait, the server is waking up (cold start)...</p>
+                    <p>
+                        Please wait, the server is waking up (cold start)
+                        <BlinkingDots />
+                    </p>
                 )}
-                <p className="text-loading">Loading posts...</p>
+                <p className="text-loading">
+                    Loading posts
+                    <BlinkingDots />
+                </p>
             </div>
         )
     } else if (httpError) {
