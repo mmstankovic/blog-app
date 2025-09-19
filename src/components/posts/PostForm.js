@@ -144,7 +144,7 @@ const Form = (props) => {
                     </div>}
                     <div className={classes.control}>
                         <label htmlFor="body">Post Body</label>
-                        <textarea id="body" type="text" rows='5' value={postData.body} onChange={(e) => setPostData({ ...postData, body: e.target.value })}></textarea>
+                        <textarea id="body" type="text" value={postData.body} onChange={(e) => setPostData({ ...postData, body: e.target.value })}></textarea>
                         {!formInputsValidity.body && <p className={classes.error}>Please enter a post body!</p>}
                     </div>
                     <div className={classes.actions}>

@@ -36,6 +36,12 @@ body {
   text-align: center;
 }
 
+@media (max-width:575px) {
+  .page-title {
+    font-size: 26px;
+  }
+}
+
 @media (min-width:768px) {
   .text-warning, .text-loading, .text-error {
     font-size: 18px;

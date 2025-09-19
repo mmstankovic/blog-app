@@ -21,6 +21,9 @@
     font-size: 1.25rem;
     color: #86888A;
 }
+.control textarea {
+    min-height: 8.125rem;
+}
 
 .control input:focus,
 .control textarea:focus {
@@ -125,7 +128,9 @@
     .control textarea {
         font-size: 15px;
     }
-
+    .control textarea {
+        min-height: 10rem;
+    }
     .post-image-container {
         width: 150px;
         height: 150px;
