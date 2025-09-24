@@ -4,8 +4,9 @@ import BlogContext from "../../store/blog-context"
 import classes from '../posts/PostForm.module.css'
 import Card from "../UI/Card"
 import BlinkingDots from '../UI/BlinkingDots'
-
-const isNotEmpty = (value) => value.trim() !== ''
+import ReactQuill from "react-quill"
+import { isNotEmpty, isPostContentEmpty } from "../../utils/validation"
+import 'react-quill/dist/quill.snow.css'
 
 const Form = (props) => {
     const blogCtx = useContext(BlogContext)
@@ -33,7 +34,7 @@ const Form = (props) => {
     const authorInputIsValid = isNotEmpty(postData.author)
     const titleInputIsValid = isNotEmpty(postData.title)
     const categoryInputIsValid = isNotEmpty(postData.category)
-    const bodyInputIsValid = isNotEmpty(postData.body)
+    const bodyInputIsValid = !isPostContentEmpty(postData.body)
     const fileInputIsValid = isEditing ? true : isNotEmpty(fileName)
 
     const uploadImageToCloudinary = async (file) => {
@@ -81,6 +82,10 @@ const Form = (props) => {
         }
     }
 
+    const handleTextEditor = (val) => {
+        setPostData({...postData, body: val})
+    }
+
     const submitForm = (e) => {
         e.preventDefault()
 
@@ -106,6 +111,24 @@ const Form = (props) => {
             props.sendNewPostData(postData)
         }
     }
+
+    const modules = {
+        toolbar: [
+            [{header:[1,2,3,false]}],
+            ['bold','italic','code','blockquote'],
+            [{'list':'ordered'},{'list':'bullet'}],
+            ['link'],
+            ['clean']
+        ]
+    }
+
+    const formats = [
+        'header',
+        'bold','italic','code','blockquote',
+        'list','ordered','bullet',
+        'link',
+        'clean'
+    ]
 
     return (
         <>
@@ -144,12 +167,12 @@ const Form = (props) => {
                     </div>}
                     <div className={classes.control}>
                         <label htmlFor="body">Post Body</label>
-                        <textarea id="body" type="text" value={postData.body} onChange={(e) => setPostData({ ...postData, body: e.target.value })}></textarea>
-                        {!formInputsValidity.body && <p className={classes.error}>Please enter a post body!</p>}
+                        <ReactQuill id='body' theme='snow' value={postData.body} onChange={handleTextEditor} modules={modules} formats={formats}/>
+                        {!formInputsValidity.body && <p className={classes.error}>Please write a blog post!</p>}
                     </div>
                     <div className={classes.actions}>
-                        <Link to='/blogs'><button>Cancel</button></Link>
-                        <button type='submit'>{blogCtx.isEditing ? 'Edit' : 'Submit'}</button>
+                        <Link to='/blogs'><button className={classes['cancel']}>Cancel</button></Link>
+                        <button className={classes['submit']} type='submit'>{blogCtx.isEditing ? 'Edit' : 'Submit'}</button>
                     </div>
                 </form>
             </Card>

@@ -21,7 +21,7 @@ const BlogItem = (props) => {
         <div className={classes["card__body"]}>
           <Link className={categoryClasses} to={`${match.path}/?category=${props.category}`}>{props.category}</Link>
           <h4>{props.title}</h4>
-          <div>{props.body}</div>
+          <div className={classes["card__excerpt"]} dangerouslySetInnerHTML={{__html:props.body}}></div>
         </div>
         <div className={classes["card__footer"]}>
           <Link className={classes.details} to={`/blogs/${props.id}`}>Read more</Link>

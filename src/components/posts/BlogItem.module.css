@@ -24,6 +24,15 @@ img {
   flex-direction: column;
   gap: .5rem;
 }
+.card__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 6em;
+}
+
 .tag {
   align-self: flex-start;
   padding: .25em .75em;
