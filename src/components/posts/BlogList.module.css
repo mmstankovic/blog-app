@@ -1,7 +1,10 @@
+.posts-container {
+    display: flex;
+    justify-content: center;
+}
 .posts-list {
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
     list-style: none;
     padding: 0;
     gap: 1.2rem;

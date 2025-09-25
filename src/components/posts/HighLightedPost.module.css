@@ -1,3 +1,7 @@
+.highlighted-card {
+    max-width: 50rem;
+    margin: 0 auto;
+}
 .highlighted-post {
     border: none;
     outline: none;

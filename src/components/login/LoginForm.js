@@ -58,7 +58,7 @@ const LoginForm = () => {
                     <button type='submit'>Login</button>
                 </div>
             </form>
-            <div>
+            <div className={classes['credentials-example']}>
                 <p>Email: test@test.com</p>
                 <p>Password: tester123</p>
             </div>

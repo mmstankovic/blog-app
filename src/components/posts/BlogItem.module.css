@@ -8,12 +8,12 @@ img {
   object-fit: cover;
 }
 .card {
+  height: 25rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 6px;
-  background: #ECE9E6;
   background: linear-gradient(to right, #FFFFFF, #ECE9E6);
   animation: animate-in 1s ease-out forwards;
   color: #86888A;
@@ -31,6 +31,20 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: 6em;
+}
+.card__excerpt p,
+.card__excerpt h1,
+.card__excerpt h2,
+.card__excerpt h3,
+.card__excerpt ul,
+.card__excerpt ol {
+  margin: 0;
+  padding: 0;
+}
+
+.card__excerpt p:empty,
+.card__excerpt p:has(br:only-child) {
+  display: none;
 }
 
 .tag {

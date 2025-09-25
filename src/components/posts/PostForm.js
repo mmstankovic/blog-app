@@ -133,7 +133,7 @@ const Form = (props) => {
     return (
         <>
             <h1 className="page-title">{isEditing ? 'Edit your post' : 'Create your post'}</h1>
-            <Card>
+            <Card className={classes['post-form-container']}>
                 <form onSubmit={submitForm}>
                     <div className={classes.control}>
                         <label htmlFor="author">Author Name</label>
@@ -172,7 +172,7 @@ const Form = (props) => {
                     </div>
                     <div className={classes.actions}>
                         <Link to='/blogs'><button className={classes['cancel']}>Cancel</button></Link>
-                        <button className={classes['submit']} type='submit'>{blogCtx.isEditing ? 'Edit' : 'Submit'}</button>
+                        <button className={classes['submit']} type='submit'>{blogCtx.isEditing ? 'Save' : 'Submit'}</button>
                     </div>
                 </form>
             </Card>
